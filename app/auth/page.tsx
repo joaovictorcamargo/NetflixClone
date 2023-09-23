@@ -1,6 +1,11 @@
+import { useState } from "react";
 import Input from "@/components/Input";
 
 const Auth = () => {
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+
   const divStyle = {
     backgroundImage: `url('/images/hero.jpg')`,
     height: "100vh",
@@ -22,7 +27,21 @@ const Auth = () => {
                 type="text"
                 label="Username"
                 value={"oi"}
-                onChange={undefined}
+                onChange={(e: any) => setName(e.target.value)} 
+                />
+               <Input
+                id="email"
+                type="email"
+                label="Email address or phone number"
+                value={"oi"}
+                onChange={(e: any) => setEmail(e.target.value)} 
+              />
+              <Input
+                type="password" 
+                id="password" 
+                label="Password" 
+                value={"oi"}
+                onChange={(e: any) => setPassword(e.target.value)} 
               />
             </div>
           </div>
