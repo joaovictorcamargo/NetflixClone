@@ -1,3 +1,5 @@
+"use client"; // This is a client component 👈🏽
+
 import { useState } from "react";
 import Input from "@/components/Input";
 
@@ -44,6 +46,9 @@ const Auth = () => {
                 onChange={(e: any) => setPassword(e.target.value)} 
               />
             </div>
+            <button onClick={() => {}} className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition">
+              Login
+            </button>
           </div>
         </div>
       </div>
